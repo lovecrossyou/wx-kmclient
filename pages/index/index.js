@@ -8,7 +8,8 @@ const app = getApp()
 
 Page({
   data: {
-    web_url:'http://47.94.169.143:8800/'
+    // web_url:'http://kuaimayoupin.com:8800/'
+    web_url:'http://h52.tuexing.com'
   },
   
   // 生成订单并支付
