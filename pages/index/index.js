@@ -9,10 +9,10 @@ const app = getApp()
 Page({
   data: {
     // web_url:'http://kuaimayoupin.com:8800/'
-    web_url:'http://h52.tuexing.com'
-    // web_url:'http://127.0.0.1:8888'
+    // web_url:'http://h52.tuexing.com'
+    web_url: 'http://127.0.0.1:8888/placeOrder'
   },
-  
+
   // 生成订单并支付
   payClick: function() {
     const orderInfo = {
@@ -40,10 +40,13 @@ Page({
         "payOrderNo": res.orderNo
       }
       payConfirm(params, res => {
-        console.log('res',res)
-        wepay(res.data, e => {
-        })
+        console.log('res', res)
+        wepay(res.data, e => {})
       });
     });
-  }
+  },
+  receivePayMessage: function (e) {
+    console.log('EventHandler qrcodeTips', e);
+  },
+  
 })
