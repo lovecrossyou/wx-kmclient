@@ -1,2 +1,2 @@
-pages/index/pay.wxml
-<!-- <web-view bindmessage="receivePayMessage" src='{{web_url}}'></web-view> -->
+
+<web-view bindmessage="receivePayMessage" src='{{web_url}}'></web-view>

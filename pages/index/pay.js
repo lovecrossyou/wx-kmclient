@@ -1,4 +1,5 @@
 // pages/index/pay.js
+var event = require('../../utils/event.js')
 Page({
 
   /**
@@ -7,66 +8,77 @@ Page({
   data: {
     // web_url:'http://kuaimayoupin.com:8800/'
     // web_url:'http://h52.tuexing.com'
-    web_url: 'http://127.0.0.1:8888/placeOrder'
+    web_url: '',
   },
 
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     console.log(options)
+    console.log("weburl", this.data.web_url)
+    event.on('DataChanged', this, function(data) {
+      this.setData({
+        web_url: data
+      });
+    })
   },
+  onUnload: function() {
+    event.remove('DataChanged', this);
+  },
+  afterPaySuccess: function(orderId) {
 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
-  receivePayMessage: function (e) {
+  receivePayMessage: function(e) {
     console.log('EventHandler qrcodeTips', e);
   },
 })

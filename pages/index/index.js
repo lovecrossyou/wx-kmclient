@@ -1,3 +1,4 @@
+var event = require('../../utils/event.js')
 const {
   payConfirm,
   orderCreate,
@@ -24,7 +25,9 @@ Page({
       }
       payConfirm(params2, res => {
         console.log('res', res)
-        wepay(res.data, e => {})
+        wepay(res.data, e => {
+          event.emit('DataChanged', 'http://h52.tuexing.com/order-detail?id=2104305524043915418');
+        })
       });
     });
   },

@@ -7,7 +7,7 @@ Page({
   data: {
     // web_url:'http://kuaimayoupin.com:8800/'
     web_url: 'http://h52.tuexing.com/profile/'
-    // web_url:'http://127.0.0.1:8888'
+    // web_url:'http://192.168.1.103:8888/profile'
   },
 
 
