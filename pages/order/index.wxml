@@ -1,2 +1,1 @@
-<!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
+<web-view src='{{web_url}}'></web-view>

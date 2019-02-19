@@ -1,2 +1,2 @@
-<!--pages/shoppingcart/index.wxml-->
-<text>pages/shoppingcart/index.wxml</text>
+<web-view src='{{web_url}}'></web-view>
+
