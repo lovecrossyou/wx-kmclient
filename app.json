@@ -1,12 +1,48 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/shop/index",
+    "pages/profile/index",
+    "pages/order/index",
+    "pages/shoppingcart/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#7CA7D2",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "鑫翼优",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#7CA7D2",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/icon/tab_snap.png",
+        "selectedIconPath": "assets/icon/tab_illume_snap.png"
+      },
+      {
+        "pagePath": "pages/shoppingcart/index",
+        "text": "购物车",
+        "iconPath": "assets/icon/tab_winning.png",
+        "selectedIconPath": "assets/icon/tab_illume_winning.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "assets/icon/tab_photo.png",
+        "selectedIconPath": "assets/icon/tab_illume_photo.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我",
+        "iconPath": "assets/icon/tab_me.png",
+        "selectedIconPath": "assets/icon/tab_illume_me.png"
+      }
+    ]
   }
 }
